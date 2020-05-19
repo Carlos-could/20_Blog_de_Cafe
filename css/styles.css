@@ -17,6 +17,7 @@ body{
 
 .contenedor{
 	max-width: 1200px;
+	width: 95%;
 	margin: 0 auto; }
 
 h1, h2, h3, h4{
@@ -42,11 +43,12 @@ img{ max-width: 100%;}
 .fw-400{font-weight: 400;}
 .fw-700{font-weight: 700;}
 
-/******************************************* Header */
+/************************* Header *******************/
 @media (min-width:768px) {
 	.barra {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 	}
 }
 
@@ -71,19 +73,75 @@ img{ max-width: 100%;}
 	font-weight: 700;
 }
 
-/** Navegacion **/
+/******************** Navegacion ********************/
 .navegacion a{
 	text-align: center;
 	display: block;
 	font-size: 1.8rem;
 }
 
+@media (min-width: 768px) {
+    .navegacion a{
+		display: inline;
+		margin-right: 2rem;
+    }
+}
 /** Texto Header **/
 .texto-header{
 	text-align: center;
 	color: #ffffff;
 	margin-top: 5rem;
 }
+
+@media (min-width: 768px) {
+	.texto-header{
+		margin-top: 15rem;
+	}
+}
 .texto-header p{
 	font-size: 2rem;
+}
+
+/************ Contenido principal *********/
+
+.contenido-principal{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.blog, .cursos{
+	flex: 0 0 100%;
+}
+
+.cursos{
+	order: -1;
+}
+
+@media (min-width: 768px) {
+	.contenido-principal{
+		justify-content: space-between;
+	}
+	.blog{
+		flex-basis: 66.6%;
+		order:-1;
+	}
+	.cursos{
+		flex-basis: calc(33.3% - 4rem);
+	}
+}
+
+/********** Entrada de Blog **********/
+.entrada-blog{
+	margin-bottom: 2rem;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+.entrada-blog:last-of-type{
+	border: none;
+}
+
+/************ Cursos Sidebar *******/
+
+.cursos-lista{
+	
 }
