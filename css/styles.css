@@ -25,7 +25,7 @@ h1, h2, h3, h4{
 }
 
 h1{ font-size: 4.8rem;}
-h2{ font-size: 4rem;}
+h2{ font-size: 4rem; line-height: 1.2;}
 h3{ font-size: 3.2rem;}
 h4{ font-size: 2.8rem;}
 
@@ -42,6 +42,41 @@ img{ max-width: 100%;}
 
 .fw-400{font-weight: 400;}
 .fw-700{font-weight: 700;}
+
+/* ********************* Grid ****************** */
+@media (min-width: 768px){
+   .grid{
+      display: flex;
+      justify-content: space-between;
+   }
+   .columnas-6{
+      flex: 0 0 calc(50% - 1rem);
+   }
+}
+
+
+/* ********************* Botones ****************** */
+
+.btn{
+   display: block;
+   text-align: center;
+   padding: 1rem 3rem;
+   margin: 2rem 0;
+   color: #ffffff;
+   text-decoration: none;
+   font-weight: 700;
+}
+@media (min-width: 768px){
+   .btn{
+      display: inline-block;
+   }
+}
+.btn-primario{
+   background-color: #000000;
+}
+.btn-secundario{
+   background-color: #784d3c;
+}
 
 /************************* Header *******************/
 @media (min-width:768px) {
@@ -78,6 +113,8 @@ img{ max-width: 100%;}
 	text-align: center;
 	display: block;
 	font-size: 1.8rem;
+   color: #ffffff;
+   text-decoration: none;
 }
 
 @media (min-width: 768px) {
@@ -141,7 +178,42 @@ img{ max-width: 100%;}
 }
 
 /************ Cursos Sidebar *******/
-
 .cursos-lista{
-	
+	padding: 0;
+   list-style: none;
+}
+
+.curso{
+   padding-bottom: 3rem;
+   border-bottom: 1px solid #e1e1e1;
+}
+
+.curso:last-of-type{
+   border-bottom: none;
+}
+.curso p {
+   font-family: 'PT Sans', sans-serif;
+   font-weight: 700;
+   font-size: 2rem;
+}
+.curso span,
+.curso p.descripcion {
+   font-weight: 400;
+
+/************ Footer *******/
+
+.site-footer{
+   background-color: #000000;
+   text-align: center;
+   padding: 3rem 0;
+   margin-top: 3rem;
+}
+.site-footer p{
+   color: #ffffff;
+   font-size: 3rem;
+   font-family: 'PT Sans', sans-serif;
+   font-weight: 400;
+}
+.site-footer span{
+   font-weight: 700;
 }
